@@ -36,7 +36,7 @@ class Signuppage extends StatelessWidget {
             children: [
               Customformfield(
                 txt: "Name",
-                icon: Icons.mail,
+                icon: Icons.person,
                 cont: name,
 
               ),
@@ -45,7 +45,7 @@ class Signuppage extends StatelessWidget {
               ),
               Customformfield(
                 txt: "Phone",
-                icon: Icons.mail,
+                icon: Icons.phone,
                 cont: phone,
 
               ),
