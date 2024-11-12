@@ -16,7 +16,7 @@ class Loginscreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Login",
+          "Login page",
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold
@@ -24,7 +24,7 @@ class Loginscreen extends StatelessWidget {
         ),
         centerTitle: true,
         leading: Icon(Icons.format_line_spacing_sharp),
-      ),
+      ),//login
       body: Center(
         child: Form(
           key: formKey,
