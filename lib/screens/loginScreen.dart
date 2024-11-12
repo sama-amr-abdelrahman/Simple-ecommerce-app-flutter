@@ -73,16 +73,16 @@ class Loginscreen extends StatelessWidget {
               TextButton(
                   onPressed: ()async{
                     if(formKey.currentState!.validate()){
+                      bool res = await pro.checkData(email.text,pass.text);
+                      print(res);
+                      if(res){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Homepage(),));
+                      }
+                      else{
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Error")));
+                      }
+                    }
 
-                    }
-                    bool res = await pro.checkData(email.text,pass.text);
-                    print(res);
-                    if(res){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Homepage(),));
-                    }
-                    else{
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Error")));
-                    }
                   },
                   child: Text("Login")
               ),
